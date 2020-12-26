@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import SectionTitle from "./components/SectionTitle";
 import MovieSearchBox from "./components/MovieSearchBox";
+import AddFavourite from "./components/AddFavourite";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -32,7 +33,7 @@ function App() {
         />
       </div>
       <div className="row">
-        <MovieList movies={movies} />
+        <MovieList movies={movies} FavouriteComponent={AddFavourite} />
       </div>
       <div className="row">
         <SectionTitle heading="Favorite Movies" />
